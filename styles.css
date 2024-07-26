@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +17,14 @@ body {
 
 .container {
     text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #333;
     margin-bottom: 0.5rem;
 }
@@ -31,21 +35,28 @@ header p {
     margin-bottom: 2rem;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .btn {
     background-color: #007BFF;
     color: white;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    margin: 0.5rem;
     outline: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
     transform: translateY(-5px);
+    background-color: #0056b3;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -55,4 +66,12 @@ header p {
 
 #professional-btn {
     background-color: #17a2b8;
+}
+
+#funny-btn:hover {
+    background-color: #218838;
+}
+
+#professional-btn:hover {
+    background-color: #138496;
 }
