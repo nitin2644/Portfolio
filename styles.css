@@ -1,129 +1,58 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margins and paddings */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f9fa;
 }
 
-header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav .container {
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-nav h1 {
+    height: 100vh;
     margin: 0;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    background: #007bff;
-    color: #fff;
-    padding: 60px 20px;
+.container {
     text-align: center;
 }
 
-.hero .btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.projects, .skills, .experience, .contact {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.projects .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-}
-
-.project-info {
-    padding: 15px;
-}
-
-.skills-list, .experience-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-}
-
-.contact button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0.5rem;
+    outline: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-footer {
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#funny-btn {
+    background-color: #28a745;
+}
+
+#professional-btn {
+    background-color: #17a2b8;
 }
