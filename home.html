@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Nitin's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .funny {
+            background-color: #ff5733;
+        }
+        .professional {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Nitin's Portfolio</h1>
+        <div class="buttons">
+            <button class="button funny" onclick="window.location.href='funny.html'">Funny Portfolio</button>
+            <button class="button professional" onclick="window.location.href='professional.html'">Professional Portfolio</button>
+        </div>
+    </div>
+</body>
+</html>
