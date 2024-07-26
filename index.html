@@ -3,28 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitin Gill - Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Selector</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
-        <header class="text-center mb-5">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">Choose your adventure:</p>
-        </header>
-
-        <main class="d-flex flex-column align-items-center">
-            <button class="btn btn-primary btn-lg mb-3" id="funny-btn">Funny Portfolio</button>
-            <button class="btn btn-info btn-lg" id="professional-btn">Professional Portfolio</button>
-        </main>
+    <div class="container">
+        <div class="button-wrapper">
+            <button id="funny-btn" class="falling-btn">Funny Portfolio</button>
+            <button id="professional-btn" class="falling-btn">Professional Portfolio</button>
+        </div>
     </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
