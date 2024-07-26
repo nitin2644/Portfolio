@@ -13,33 +13,53 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .button-wrapper {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.falling-btn {
-    position: absolute;
-    width: 200px;
-    height: 50px;
+.star-btn {
+    position: relative;
+    width: 100px;
+    height: 100px;
     border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    color: #fff;
-    background: #333;
+    border-radius: 50%;
+    background: transparent;
     cursor: pointer;
     outline: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.star-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+    animation: sparkle 1.5s infinite;
+    pointer-events: none;
+}
+
+.funny-btn {
     animation: fall 2s ease-out forwards;
-    opacity: 0;
 }
 
-#funny-btn {
-    animation-delay: 0s;
-}
-
-#professional-btn {
+.professional-btn {
+    animation: fall 2s ease-out forwards;
     animation-delay: 1s;
 }
 
@@ -55,19 +75,34 @@ body, html {
 }
 
 @keyframes sparkle {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); opacity: 0.5; }
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0.3; }
     100% { transform: scale(1); opacity: 0; }
 }
 
-.falling-btn::after {
-    content: ' ';
+.funny-btn::after, .professional-btn::after {
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-    animation: sparkle 1.5s infinite;
-    pointer-events: none;
+    width: 200%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, rgba(255, 215, 0, 0) 100%);
+    animation: glitter 2s infinite;
+    border-radius: 50%;
+}
+
+@keyframes glitter {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.5; }
+}
+
+.funny-btn {
+    margin-right: auto;
+}
+
+.professional-btn {
+    margin-left: auto;
 }
